@@ -87,7 +87,7 @@ openReq.onsuccess = function (event) {
 }
 
 function updateDb(db, store_name, cnt) {
-    var trans = db.transation(store_name, "readwrite");
+    var trans = db.transaction(store_name, "readwrite");
     var store = trans.objectStore(store_name);
     return store.put({
         id: 1,
