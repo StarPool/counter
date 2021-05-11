@@ -71,7 +71,7 @@ openReq.onsuccess = function (event) {
         }
     });
 
-    document.getElementById('countRest').addEventListener('click', function() {
+    document.getElementById('countReset').addEventListener('click', function() {
         count = 0;
         var putReq = updateDb(db, storeName, count);
 
