@@ -24,7 +24,7 @@ openReq.onupgradeneeded = function(event) {
 // onupgradeneededの後に実行。更新がない場合はこれだけ実行
 openReq.onsuccess = function (event) {
     var db = event.target.result;
-    var trans = db.transation(storeName, "readonly");
+    var trans = db.transaction(storeName, "readonly");
     var store = trans.objectStore(storeName);
     var getReq = store.get(1);
 
